@@ -1,2 +1,2 @@
-# APIautomationFramework
-Rest , Java
+# Simplified Test Automation Framework
+Java
