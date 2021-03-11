@@ -13,13 +13,37 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
                 <configuration>
-                    <source>7</source>
-                    <target>7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <!--Add your XML File here-->
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <seleniumVersion>4.0.0-beta-1</seleniumVersion>
+        <webDriverManagerVersion>4.3.1</webDriverManagerVersion>
+        <testNgVersion>7.4.0</testNgVersion>
+        <extentReports>5.0.7</extentReports>
+        <apachePOIVersion>5.0.0</apachePOIVersion>
+        <poiOOXmlVersion>5.0.0</poiOOXmlVersion>
+        <robotFrameworkVersion>3.2.2</robotFrameworkVersion>
+        <commons-ioVersion>2.8.0</commons-ioVersion>
+        <ngWebDriverVersion>1.1.6</ngWebDriverVersion>
+    </properties>
 
     <dependencies>
 
@@ -27,14 +51,21 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.141.59</version>
+            <version>${seleniumVersion}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webDriverManagerVersion}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.14.3</version>
+            <version>${testNgVersion}</version>
             <scope>test</scope>
         </dependency>
 
@@ -42,63 +73,44 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>4.0.5</version>
+            <version>${extentReports}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>${commons-ioVersion}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-        <dependency>
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>3.4.0</version>
-        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>4.0.0</version>
+            <version>${apachePOIVersion}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>4.0.0</version>
+            <version>${poiOOXmlVersion}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.robotframework/robotframework -->
         <dependency>
             <groupId>org.robotframework</groupId>
             <artifactId>robotframework</artifactId>
-            <version>3.0.4</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>2.11.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>2.11.0</version>
+            <version>${robotFrameworkVersion}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.paulhammant/ngwebdriver -->
         <dependency>
             <groupId>com.paulhammant</groupId>
             <artifactId>ngwebdriver</artifactId>
-            <version>1.1.4</version>
+            <version>${ngWebDriverVersion}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver -->
@@ -117,5 +129,6 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
+
 
 </project>
