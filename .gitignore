@@ -108,5 +108,7 @@ buildNumber.properties
 
 test-output
 FRAMEWORK.iml
+javaTestAutomation.iml
 .idea
 Drivers
+javaTestAutomation.iml

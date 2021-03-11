@@ -43,6 +43,8 @@
         <robotFrameworkVersion>3.2.2</robotFrameworkVersion>
         <commons-ioVersion>2.8.0</commons-ioVersion>
         <ngWebDriverVersion>1.1.6</ngWebDriverVersion>
+        <log4JCoreVersion>2.11.0</log4JCoreVersion>
+        <log4JApiVersion>2.11.0</log4JApiVersion>
     </properties>
 
     <dependencies>
@@ -118,6 +120,20 @@
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
             <version>1.4.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4JCoreVersion}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4JApiVersion}</version>
         </dependency>
 
     </dependencies>
