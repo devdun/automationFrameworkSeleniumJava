@@ -43,7 +43,7 @@
         <robotFrameworkVersion>3.2.2</robotFrameworkVersion>
         <commons-ioVersion>2.8.0</commons-ioVersion>
         <ngWebDriverVersion>1.1.6</ngWebDriverVersion>
-        <log4JCoreVersion>2.11.0</log4JCoreVersion>
+        <log4JCoreVersion>2.13.2</log4JCoreVersion>
         <log4JApiVersion>2.11.0</log4JApiVersion>
     </properties>
 
