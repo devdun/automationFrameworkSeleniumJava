@@ -1,9 +1,8 @@
 package utils;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.core.util.Assert;
-import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
